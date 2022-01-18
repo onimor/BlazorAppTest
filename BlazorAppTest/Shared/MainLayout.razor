@@ -1,17 +1,123 @@
-﻿@inherits LayoutComponentBase
+﻿
+@inherits LayoutComponentBase
+@inject IDialogService Dialog
+@inject ISnackbar Snackbar
+@inject IJSRuntime JSRuntime  
+<MudThemeProvider/>
+<MudDialogProvider/>
+<MudSnackbarProvider/>
+<MudLayout>
+    <MudAppBar Elevation="1">
+        
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+           
+        <MudSpacer/>
+       
+      
+    </MudAppBar>
+   
+    <MudDrawer @bind-Open="_drawerOpen" Elevation="2">
+        <MudDrawerHeader>
+            <MudText Typo="Typo.h5" Class="mt-1">Заявки</MudText>
+            <MudItem xs="12" md="12"> </MudItem>
+        </MudDrawerHeader>
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+        <NavMenu/> 
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div>
+    </MudDrawer>
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+    <MudDrawer @bind-Open="@open" Anchor="Anchor.End" Elevation="1" Variant="@DrawerVariant.Temporary">
+        <MudDrawerHeader>
+            <MudText Typo="Typo.h6">Параметры</MudText>
+        </MudDrawerHeader>
+        <MudNavMenu>
+            <MudButton Style="margin-left:15px" Size="Size.Medium" OnClick="@((e) => DarkMode())" Variant="Variant.Text" IconColor="Color.Inherit" StartIcon="@Icons.Material.Filled.Brightness4" IconSize="Size.Medium">Light/Dark</MudButton>
+            
+           
+            
+        </MudNavMenu>
+    </MudDrawer>
+    
+    <MudMainContent>
+        <MudContainer Class="pa-md-3" MaxWidth="MaxWidth.ExtraLarge">
+         @Body
+
+                @code 
+            {
+                private bool success;
+                private bool open;
+                protected async override Task OnInitializedAsync()
+                {
+                     success = true;
+                }
+                }
+            </MudContainer>
+        </MudMainContent> 
+    </MudLayout>
+ <MudThemeProvider Theme="currentTheme" />
+
+@code {
+    bool _drawerOpen = false;
+    
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+
+    protected override void OnInitialized()
+    {
+        currentTheme = darkTheme;
+    }
+    DialogOptions maxWidth = new DialogOptions() { MaxWidth = MaxWidth.Medium, FullWidth = true };
+    
+    void DarkMode()
+    {
+        open = false;
+        if (currentTheme == defaultTheme)
+        {
+            currentTheme = darkTheme;
+        }
+        else
+        {
+            currentTheme = defaultTheme;
+        }
+    }
+
+    MudTheme currentTheme = new MudTheme();
+    MudTheme defaultTheme = new MudTheme()
+    {
+        Palette = new Palette()
+        {
+            Black = "#272c34"
+        }
+    };
+
+    MudTheme darkTheme = new MudTheme()
+    {
+        Palette = new Palette()
+        {
+            Black = "#27272f",
+            Background = "#32333d",
+            BackgroundGrey = "#27272f",
+            Surface = "#373740",
+            DrawerBackground = "#27272f",
+            DrawerText = "rgba(255,255,255, 0.50)",
+            DrawerIcon = "rgba(255,255,255, 0.50)",
+            AppbarBackground = "#27272f",
+            AppbarText = "rgba(255,255,255, 0.70)",
+            TextPrimary = "rgba(255,255,255, 0.70)",
+            TextSecondary = "rgba(255,255,255, 0.50)",
+            ActionDefault = "#adadb1",
+            ActionDisabled = "rgba(255,255,255, 0.26)",
+            ActionDisabledBackground = "rgba(255,255,255, 0.12)",
+            Divider = "rgba(255,255,255, 0.12)",
+            DividerLight = "rgba(255,255,255, 0.06)",
+            TableLines = "rgba(255,255,255, 0.12)",
+            LinesDefault = "rgba(255,255,255, 0.12)",
+            LinesInputs = "rgba(255,255,255, 0.3)",
+            TextDisabled = "rgba(255,255,255, 0.2)",
+             Primary ="#a399ff"
+            
+        }
+    };
+}
