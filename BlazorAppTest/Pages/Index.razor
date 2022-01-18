@@ -22,7 +22,7 @@
         StiFontCollection.AddFontBase64(fontBase64, "Segoe UI");
 
 		report = StiReport.CreateNewReport();
-		var bytes = await Http.GetByteArrayAsync("Reports/TripList.mrt");
+		var bytes = await Http.GetByteArrayAsync("Reporst/TripList.mrt");
 		report.Load(bytes);
 
 		options = new StiBlazorViewerOptions();
