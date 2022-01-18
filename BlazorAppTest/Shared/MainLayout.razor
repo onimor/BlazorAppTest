@@ -21,9 +21,7 @@
             <MudText Typo="Typo.h5" Class="mt-1">Заявки</MudText>
             <MudItem xs="12" md="12"> </MudItem>
         </MudDrawerHeader>
-
         <NavMenu/> 
-
     </MudDrawer>
 
     <MudDrawer @bind-Open="@open" Anchor="Anchor.End" Elevation="1" Variant="@DrawerVariant.Temporary">
@@ -32,25 +30,12 @@
         </MudDrawerHeader>
         <MudNavMenu>
             <MudButton Style="margin-left:15px" Size="Size.Medium" OnClick="@((e) => DarkMode())" Variant="Variant.Text" IconColor="Color.Inherit" StartIcon="@Icons.Material.Filled.Brightness4" IconSize="Size.Medium">Light/Dark</MudButton>
-            
-           
-            
         </MudNavMenu>
     </MudDrawer>
     
     <MudMainContent>
         <MudContainer Class="pa-md-3" MaxWidth="MaxWidth.ExtraLarge">
-         @Body
-
-                @code 
-            {
-                private bool success;
-                private bool open;
-                protected async override Task OnInitializedAsync()
-                {
-                     success = true;
-                }
-                }
+             @Body
             </MudContainer>
         </MudMainContent> 
     </MudLayout>
@@ -58,7 +43,12 @@
 
 @code {
     bool _drawerOpen = false;
-    
+     private bool success;
+     private bool open;
+     protected async override Task OnInitializedAsync()
+     {
+         success = true;
+     }
     void DrawerToggle()
     {
         _drawerOpen = !_drawerOpen;
