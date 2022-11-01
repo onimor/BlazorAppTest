@@ -19,7 +19,13 @@
 	private List<BalloonDto> printingLists = new();
 	protected override async Task OnInitializedAsync()
 	{ 
-		Stimulsoft.Base.StiLicense.Key = "my";
+		Stimulsoft.Base.StiLicense.Key = "6vJhGtLLLz2GNviWmUTrhSqnOItdDwjBylQzQcAOiHmRcE6LvZWuCMkoec/KaVLZ+RRQBvX6WojHO5nt+FVhALzcVG" +
+			"PspfZ3yyTp6F/nn6wXv3H9adzIrqTJp+WwF5FP+jgm1PdFLxNe0p9CCc5GmEA/Ocwt7cj433VGO8PBaTlX4BjWjXwS" +
+			"ZKRJZ/MaYhqJYdhzwdLTXdev3vbk2BN1CAIPaMxqSLaWY7ZQ5BeqMVbXlPc5k6dVJ3Tt1yE+RtJosPtn4LyNuSUgXR" +
+			"Lkr8sP6Vg7G2+YMQ/TsF2vwWMiDoTwgLfqvXK18IeMOW+xMEQcciZ9Z4Mt5ogtU1oN1abpcnIt6ZultLygylNC/GFF" +
+			"3b5At2tra3l9sMZ6c1blpL1jyZ/fJ1tTRrl0/7cUwfGwN4vzUDyi/PMdmpV2b2+0ldbDh3/d8QS4Yx2Ok9+28n85+B" +
+			"X8soN+LPWCg2qrjadPHySgoFVqhy4tonTBP8NT0lDnVmojrZ2z8WHKQmTVI38mu5dLtUnSUz7VL2LiqpVV5jxaii/+" +
+			"IRTR/5IwsEDKXckzVpCOolxuWjH20F+eHEFDk8V/2cCF9hWBhVXlKJirRMHfqjURyCoC8o3DdA4CCSk=";
 		report = StiReport.CreateNewReport();
 		var bytes = await Http.GetByteArrayAsync("Reporst/QRCode.mrt");
 		report.Load(bytes);
@@ -31,7 +37,7 @@
 	}
 	private void GetData()
 	{
-		for (var i = 0; i < 10; i++)
+		for (var i = 0; i < 24; i++)
 		{
 			printingLists.Add(new BalloonDto { Id = Guid.NewGuid(), Name = i.ToString() });
 		}

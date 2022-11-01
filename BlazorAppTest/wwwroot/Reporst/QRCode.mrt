@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <StiSerializer version="1.02" type="Net" application="StiReport">
+  <AutoLocalizeReportOnRun>True</AutoLocalizeReportOnRun>
+  <Culture>ru-RU</Culture>
   <Dictionary Ref="1" type="Dictionary" isKey="true">
     <BusinessObjects isList="true" count="1">
       <TestReuests Ref="2" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
@@ -7,12 +9,11 @@
         <BusinessObjects isList="true" count="0" />
         <Category />
         <Columns isList="true" count="2">
-          <value>ORIGINAL,Name,Name,Name,System.String,_x0036_bd05c0b062d46019f6365fdf30c4990</value>
-          <value>ORIGINAL,Id,Id,Id,System.String,a24e9f1a99c741b8960e27588ca75cbe</value>
+          <value>Name,System.String</value>
+          <value>Id,System.String</value>
         </Columns>
         <Dictionary isRef="1" />
-        <Guid>e630b9727ed045fabdb09b1b4a9a82f9</Guid>
-        <Key>20abbe33d27d42c39631172386c7c8dd</Key>
+        <Guid>a05d4913ee544708851187b624ce9fce</Guid>
         <Name>TestReuests</Name>
       </TestReuests>
     </BusinessObjects>
@@ -21,14 +22,11 @@
     <Relations isList="true" count="0" />
     <Report isRef="0" />
     <Resources isList="true" count="0" />
-    <Variables isList="true" count="2">
-      <value>,TitleBandValue,TitleBandValue,,System.String,Ежемесячный_x0020_сводный_x0020_отчет_x0020_по_x0020_сотрудникам_x0020_ПДО,False,False,False,False</value>
-      <value>,CurDate,CurDate,,System.String,,False,False,False,False</value>
-    </Variables>
+    <Variables isList="true" count="0" />
   </Dictionary>
   <EngineVersion>EngineV2</EngineVersion>
   <GlobalizationStrings isList="true" count="0" />
-  <Key>f253b9293d964c4a853607be8806a8fb</Key>
+  <Key>ddbb4624844b467ea8d26d344cc264bb</Key>
   <MetaTags isList="true" count="0" />
   <Pages isList="true" count="1">
     <Page1 Ref="3" type="Page" isKey="true">
@@ -37,18 +35,41 @@
       <Components isList="true" count="1">
         <Data Ref="4" type="DataBand" isKey="true">
           <Brush>Transparent</Brush>
-          <BusinessObjectGuid>e630b9727ed045fabdb09b1b4a9a82f9</BusinessObjectGuid>
-          <ClientRectangle>0,0.4,5.8,5.4</ClientRectangle>
-          <Components isList="true" count="2">
-            <BarCode1 Ref="5" type="Stimulsoft.Report.BarCodes.StiBarCode" isKey="true">
+          <BusinessObjectGuid>a05d4913ee544708851187b624ce9fce</BusinessObjectGuid>
+          <ClientRectangle>0,0.4,17.5,4.6</ClientRectangle>
+          <ColumnGaps>0.6</ColumnGaps>
+          <Columns>4</Columns>
+          <ColumnWidth>4</ColumnWidth>
+          <Components isList="true" count="3">
+            <DataTestReuests_Id Ref="5" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>1,3.4,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial Black,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTestReuests_Id</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>{TestReuests.Name}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTestReuests_Id>
+            <BarCode1 Ref="6" type="Stimulsoft.Report.BarCodes.StiBarCode" isKey="true">
               <AutoScale>True</AutoScale>
               <BackColor>Transparent</BackColor>
-              <BarCodeType Ref="6" type="Stimulsoft.Report.BarCodes.StiQRCodeBarCodeType" isKey="true">
+              <BarCodeType Ref="7" type="Stimulsoft.Report.BarCodes.StiQRCodeBarCodeType" isKey="true">
                 <BodyBrush>EmptyBrush</BodyBrush>
+                <BodyShape>ZebraCross2</BodyShape>
                 <EyeBallBrush>EmptyBrush</EyeBallBrush>
+                <EyeBallShape>Round</EyeBallShape>
                 <EyeFrameBrush>EmptyBrush</EyeFrameBrush>
+                <EyeFrameShape>Round3</EyeFrameShape>
               </BarCodeType>
-              <ClientRectangle>0.6,0.2,4.6,4.6</ClientRectangle>
+              <ClientRectangle>0.5,0.4,3,3</ClientRectangle>
               <Code>{TestReuests.Id}</Code>
               <Conditions isList="true" count="0" />
               <Expressions isList="true" count="0" />
@@ -58,26 +79,23 @@
               <Name>BarCode1</Name>
               <Page isRef="3" />
               <Parent isRef="4" />
-              <ShowQuietZones>False</ShowQuietZones>
               <VertAlignment>Center</VertAlignment>
             </BarCode1>
-            <Text1 Ref="7" type="Text" isKey="true">
+            <Shape1 Ref="8" type="Shape" isKey="true">
+              <BackgroundColor>Transparent</BackgroundColor>
+              <BorderColor>Black</BorderColor>
               <Brush>Transparent</Brush>
-              <ClientRectangle>0,4.9,5.8,0.5</ClientRectangle>
+              <ClientRectangle>0,0,4,4</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Expressions isList="true" count="0" />
-              <Font>Arial,14,Bold</Font>
-              <HorAlignment>Center</HorAlignment>
+              <Font>Arial,8</Font>
+              <ForeColor>Black</ForeColor>
               <Margins>0,0,0,0</Margins>
-              <Name>Text1</Name>
+              <Name>Shape1</Name>
               <Page isRef="3" />
               <Parent isRef="4" />
-              <ShrinkFontToFit>True</ShrinkFontToFit>
-              <Text>{TestReuests.Name}</Text>
-              <TextBrush>Black</TextBrush>
-              <TextQuality>Typographic</TextQuality>
-              <VertAlignment>Center</VertAlignment>
-            </Text1>
+              <ShapeType Ref="9" type="Stimulsoft.Report.Components.ShapeTypes.StiRectangleShapeType" isKey="true" />
+            </Shape1>
           </Components>
           <Conditions isList="true" count="0" />
           <DataSourceName isNull="true" />
@@ -91,14 +109,12 @@
       </Components>
       <Conditions isList="true" count="0" />
       <Expressions isList="true" count="0" />
-      <Guid>b68ff72ccab946f5b6da114e4ae9c30d</Guid>
-      <Margins>0,0,0,0</Margins>
+      <Guid>7dcb6fafabf14d8c8dd15db0f3e8332f</Guid>
+      <Margins>1.7,1.8,1.6,0</Margins>
       <Name>Page1</Name>
-      <Orientation>Landscape</Orientation>
-      <PageHeight>5.8</PageHeight>
-      <PageWidth>5.8</PageWidth>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
       <Report isRef="0" />
-      <StretchToPrintArea>True</StretchToPrintArea>
     </Page1>
   </Pages>
   <ReferencedAssemblies isList="true" count="8">
@@ -112,13 +128,13 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>6/22/2022 6:57:31 PM</ReportChanged>
-  <ReportCreated>3/4/2022 9:24:37 AM</ReportCreated>
+  <ReportChanged>11/1/2022 10:49:15 AM</ReportChanged>
+  <ReportCreated>10/25/2022 6:01:07 PM</ReportCreated>
   <ReportFile>C:\Users\onimo\source\repos\BTM\Backend\BTM.Backend.MinimalApi\Resources\Reports\QRCode.mrt</ReportFile>
-  <ReportGuid>f3d9f53d3c494233b9a47db1022f92c2</ReportGuid>
+  <ReportGuid>3a1d75bf33054404b4fd62d9ad8e29b0</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
-  <ReportVersion>2022.3.1.0</ReportVersion>
+  <ReportVersion>2022.3.2.0</ReportVersion>
   <Script>using System;
 using System.Drawing;
 using System.Windows.Forms;
