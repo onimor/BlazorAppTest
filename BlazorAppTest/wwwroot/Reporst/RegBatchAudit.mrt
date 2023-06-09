@@ -1,0 +1,966 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="1">
+      <BoxByIDH Ref="2" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+        <Alias>BoxByIDH</Alias>
+        <BusinessObjects isList="true" count="0" />
+        <Category>BoxByIDHOn</Category>
+        <Columns isList="true" count="23">
+          <value>ORIGINAL,CreatedDate,CreatedDate,CreatedDate,System.DateTime,_x0035_0df5d5e6c494356b3d13df321280812</value>
+          <value>LineName,System.String</value>
+          <value>IDH,System.Int32</value>
+          <value>ProdName,System.String</value>
+          <value>ProdDesc,System.String</value>
+          <value>QnPerBox,System.Int32</value>
+          <value>Nominal,System.Int32</value>
+          <value>PartNum,System.Int32</value>
+          <value>Shift,System.String</value>
+          <value>Weight1,System.Single</value>
+          <value>Weight2,System.Single</value>
+          <value>Weight3,System.Single</value>
+          <value>Weight4,System.Single</value>
+          <value>Weight5,System.Single</value>
+          <value>Weight6,System.Single</value>
+          <value>WeightAver,System.Single</value>
+          <value>StatW1,System.Int32</value>
+          <value>StatW2,System.Int32</value>
+          <value>StatW3,System.Int32</value>
+          <value>StatW4,System.Int32</value>
+          <value>StatW5,System.Int32</value>
+          <value>StatW6,System.Int32</value>
+          <value>StatWaver,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Guid>85713b40e3c645a0b4e174aedf53d5ea</Guid>
+        <Key>77cdf5c4b6e74790972fab4a4aca622b</Key>
+        <Name>BoxByIDH</Name>
+      </BoxByIDH>
+    </BusinessObjects>
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="0" />
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="2">
+      <value>,DateStart,DateStart,,System.DateTime,_x0036__x002F_18_x002F_2022_x0020_1:49:52_x0020_AM,False,False,False,False,,_x0031_ac031cb2a4241359db01448fc5a2a9b</value>
+      <value>,DateEnd,DateEnd,,System.DateTime,_x0036__x002F_18_x002F_2022_x0020_1:49:52_x0020_AM,False,False,False,False,,_x0033_21494adc59940ebade6d829cd4a549e</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <Key>fcef7ed2e48e413aaba0cbd1f3fb6093</Key>
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="3" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="3">
+        <ReportTitleBand1 Ref="4" type="ReportTitleBand" isKey="true">
+          <Border>None;[215:255:215];1;Solid;False;4;Black</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,27.7,1.4</ClientRectangle>
+          <Components isList="true" count="7">
+            <Text1 Ref="5" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.2,0.8,13.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>Отчет по регистрации пачек с {Format("{0:dd MMMM yyyy г. HH:mm:ss}", DateStart)} по {Format("{0:dd MMMM yyyy г. HH:mm:ss}", DateEnd)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Text3 Ref="6" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>24,0.8,3.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>{Format("{0:dd.MM.yyyy}",Today)} {Format("{0:HH:mm:ss}",Time)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+            <Text5 Ref="7" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>[190:255:180]</Brush>
+              <ClientRectangle>0.2,0.2,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>+/- 0.5%</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text2 Ref="8" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>[255:255:192]</Brush>
+              <ClientRectangle>2.2,0.2,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>+/- 1.0%</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text9 Ref="9" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>[255:234:234]</Brush>
+              <ClientRectangle>4.2,0.2,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>+/- 1.5%</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text9>
+            <Text10 Ref="10" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>[255:147:147]</Brush>
+              <ClientRectangle>6.2,0.2,2.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>недовес &gt; 1.5%</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text10>
+            <Text11 Ref="11" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>[255:131:78]</Brush>
+              <ClientRectangle>8.8,0.2,2.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>перевес &gt; 1.5%</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text11>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>ReportTitleBand1</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+        </ReportTitleBand1>
+        <HeaderBand1 Ref="12" type="HeaderBand" isKey="true">
+          <Border>All;Black;1;Solid;False;4;Black</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,2.6,27.7,0.8</ClientRectangle>
+          <Components isList="true" count="16">
+            <Text4 Ref="13" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[215:255:215]</Brush>
+              <ClientRectangle>2.8,0,1.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="3" />
+              <Parent isRef="12" />
+              <Text>IDH</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text16 Ref="14" type="Text" isKey="true">
+              <Border>All;[0:0:0];1;Solid;False;4;Black</Border>
+              <Brush>[215:255:215]</Brush>
+              <ClientRectangle>0,0,2.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="3" />
+              <Parent isRef="12" />
+              <Text>Дата регистрации</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text16>
+            <Text8 Ref="15" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[215:255:215]</Brush>
+              <ClientRectangle>4.6,0,3.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="3" />
+              <Parent isRef="12" />
+              <Text>Имя рецептуры</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Text12 Ref="16" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[215:255:215]</Brush>
+              <ClientRectangle>7.8,0,3,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="3" />
+              <Parent isRef="12" />
+              <Text>Описание рецептуры</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text12>
+            <Text13 Ref="17" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[215:255:215]</Brush>
+              <ClientRectangle>10.8,0,1.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="3" />
+              <Parent isRef="12" />
+              <Text>Номинал</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text13>
+            <Text14 Ref="18" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[215:255:215]</Brush>
+              <ClientRectangle>12.4,0,1.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="3" />
+              <Parent isRef="12" />
+              <Text>Пачек в упаковке</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text14>
+            <Text15 Ref="19" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[215:255:215]</Brush>
+              <ClientRectangle>14,0,2.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="3" />
+              <Parent isRef="12" />
+              <Text>Фасовочная линия</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text15>
+            <Text17 Ref="20" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[215:255:215]</Brush>
+              <ClientRectangle>16.8,0,1.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="3" />
+              <Parent isRef="12" />
+              <Text>Смена</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text17>
+            <Text18 Ref="21" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[215:255:215]</Brush>
+              <ClientRectangle>18,0,8.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="3" />
+              <Parent isRef="12" />
+              <Text>Вес пачек</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text18>
+            <Text19 Ref="22" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[215:255:215]</Brush>
+              <ClientRectangle>26.4,0,1.3,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="3" />
+              <Parent isRef="12" />
+              <Text>Среднее</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text19>
+            <Text20 Ref="23" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[215:255:215]</Brush>
+              <ClientRectangle>18,0.4,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="3" />
+              <Parent isRef="12" />
+              <Text>1</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text20>
+            <Text21 Ref="24" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[215:255:215]</Brush>
+              <ClientRectangle>19.4,0.4,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="3" />
+              <Parent isRef="12" />
+              <Text>2</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text21>
+            <Text22 Ref="25" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[215:255:215]</Brush>
+              <ClientRectangle>20.8,0.4,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text22</Name>
+              <Page isRef="3" />
+              <Parent isRef="12" />
+              <Text>3</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text22>
+            <Text23 Ref="26" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[215:255:215]</Brush>
+              <ClientRectangle>22.2,0.4,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="3" />
+              <Parent isRef="12" />
+              <Text>4</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text23>
+            <Text24 Ref="27" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[215:255:215]</Brush>
+              <ClientRectangle>23.6,0.4,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text24</Name>
+              <Page isRef="3" />
+              <Parent isRef="12" />
+              <Text>5</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text24>
+            <Text25 Ref="28" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[215:255:215]</Brush>
+              <ClientRectangle>25,0.4,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text25</Name>
+              <Page isRef="3" />
+              <Parent isRef="12" />
+              <Text>6</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text25>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>HeaderBand1</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+        </HeaderBand1>
+        <Data Ref="29" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid>85713b40e3c645a0b4e174aedf53d5ea</BusinessObjectGuid>
+          <ClientRectangle>0,4.2,27.7,0.8</ClientRectangle>
+          <Components isList="true" count="15">
+            <DataBoxByIDH_Shift Ref="30" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,2.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataBoxByIDH_Shift</Name>
+              <Page isRef="3" />
+              <Parent isRef="29" />
+              <Text>{Format("{0:dd.MM.yyyy HH:mm:ss}", BoxByIDH.CreatedDate)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataBoxByIDH_Shift>
+            <DataBoxByIDH_GrQn Ref="31" type="Text" isKey="true">
+              <Border>Top, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>[245:245:245]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.8,0,1.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataBoxByIDH_GrQn</Name>
+              <Page isRef="3" />
+              <Parent isRef="29" />
+              <Text>{BoxByIDH.IDH}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataBoxByIDH_GrQn>
+            <DataBoxByIDH_GrDevW Ref="32" type="Text" isKey="true">
+              <Border>Top, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>4.6,0,3.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataBoxByIDH_GrDevW</Name>
+              <Page isRef="3" />
+              <Parent isRef="29" />
+              <Text>{BoxByIDH.ProdName}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="33" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator> </GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataBoxByIDH_GrDevW>
+            <DataBoxByIDH_GrPrs Ref="34" type="Text" isKey="true">
+              <Border>Top, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>7.8,0,3,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataBoxByIDH_GrPrs</Name>
+              <Page isRef="3" />
+              <Parent isRef="29" />
+              <Text>{BoxByIDH.ProdDesc}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="35" type="NumberFormat" isKey="true">
+                <DecimalDigits>1</DecimalDigits>
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator> </GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataBoxByIDH_GrPrs>
+            <DataBoxByIDH_RdDwQn Ref="36" type="Text" isKey="true">
+              <Border>Top, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>[245:245:245]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>10.8,0,1.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataBoxByIDH_RdDwQn</Name>
+              <Page isRef="3" />
+              <Parent isRef="29" />
+              <Text>{BoxByIDH.Nominal}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="37" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator> </GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataBoxByIDH_RdDwQn>
+            <DataBoxByIDH_RdUpPrs Ref="38" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>16.8,0,1.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataBoxByIDH_RdUpPrs</Name>
+              <Page isRef="3" />
+              <Parent isRef="29" />
+              <Text>{BoxByIDH.Shift}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="39" type="NumberFormat" isKey="true">
+                <DecimalDigits>1</DecimalDigits>
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator> </GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataBoxByIDH_RdUpPrs>
+            <DataBoxByIDH_SumWeight Ref="40" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[245:245:245]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>26.4,0,1.3,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataBoxByIDH_SumWeight</Name>
+              <Page isRef="3" />
+              <Parent isRef="29" />
+              <Text>{Round(BoxByIDH.WeightAver,0)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="41" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator> </GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataBoxByIDH_SumWeight>
+            <Text48 Ref="42" type="Text" isKey="true">
+              <Border>Top, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>[245:245:245]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>18,0,1.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="5">
+                <value>_x007B_BoxByIDH.StatW1_x0020__x003D__x003D__x0020_1_x0020__x007C__x007C__x0020_BoxByIDH.StatW1_x0020__x003D__x003D__x0020_2_x007D_,[0:0:0],[190:255:180],Arial_x002C_8,True,False,,,Top_x002C__x0020_Left_x002C__x0020_Bottom</value>
+                <value>_x007B_BoxByIDH.StatW1_x0020__x003D__x003D__x0020_3_x0020__x007C__x007C__x0020_BoxByIDH.StatW1_x0020__x003D__x003D__x0020_4_x007D_,[0:0:0],[255:255:192],Arial_x002C_8,True,False,,,Top_x002C__x0020_Left_x002C__x0020_Bottom</value>
+                <value>_x007B_BoxByIDH.StatW1_x0020__x003D__x003D__x0020_5_x0020__x007C__x007C__x0020_BoxByIDH.StatW1_x0020__x003D__x003D__x0020_6_x007D_,[0:0:0],[255:234:234],Arial_x002C_8,True,False,,,Top_x002C__x0020_Left_x002C__x0020_Bottom</value>
+                <value>_x007B_BoxByIDH.StatW1_x0020__x003D__x003D__x0020_7_x007D_,[0:0:0],[255:147:147],Arial_x002C_8,True,False,,,Top_x002C__x0020_Left_x002C__x0020_Bottom</value>
+                <value>_x007B_BoxByIDH.StatW1_x0020__x003D__x003D__x0020_8_x007D_,[0:0:0],[248:127:76],Arial_x002C_8,True,False,,,Top_x002C__x0020_Left_x002C__x0020_Bottom</value>
+              </Conditions>
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text48</Name>
+              <Page isRef="3" />
+              <Parent isRef="29" />
+              <Text>{Round(BoxByIDH.Weight1,0)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="43" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator> </GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text48>
+            <Text26 Ref="44" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>12.4,0,1.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text26</Name>
+              <Page isRef="3" />
+              <Parent isRef="29" />
+              <Text>{BoxByIDH.QnPerBox}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="45" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator> </GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text26>
+            <Text27 Ref="46" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[245:245:245]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>14,0,2.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text27</Name>
+              <Page isRef="3" />
+              <Parent isRef="29" />
+              <Text>{BoxByIDH.LineName}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="47" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator> </GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text27>
+            <Text6 Ref="48" type="Text" isKey="true">
+              <Border>Top, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>[245:245:245]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>19.4,0,1.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="5">
+                <value>_x007B_BoxByIDH.StatW2_x0020__x003D__x003D__x0020_1_x0020__x007C__x007C__x0020_BoxByIDH.StatW2_x0020__x003D__x003D__x0020_2_x007D_,[0:0:0],[190:255:180],Arial_x002C_8,True,False,,,Top_x002C__x0020_Bottom</value>
+                <value>_x007B_BoxByIDH.StatW2_x0020__x003D__x003D__x0020_3_x0020__x007C__x007C__x0020_BoxByIDH.StatW2_x0020__x003D__x003D__x0020_4_x007D_,[0:0:0],[255:255:192],Arial_x002C_8,True,False,,,Top_x002C__x0020_Bottom</value>
+                <value>_x007B_BoxByIDH.StatW2_x0020__x003D__x003D__x0020_5_x0020__x007C__x007C__x0020_BoxByIDH.StatW2_x0020__x003D__x003D__x0020_6_x007D_,[0:0:0],[255:234:234],Arial_x002C_8,True,False,,,Top_x002C__x0020_Bottom</value>
+                <value>_x007B_BoxByIDH.StatW2_x0020__x003D__x003D__x0020_7_x007D_,[0:0:0],[255:147:147],Arial_x002C_8,True,False,,,Top_x002C__x0020_Bottom</value>
+                <value>_x007B_BoxByIDH.StatW2_x0020__x003D__x003D__x0020_8_x007D_,[0:0:0],[248:127:76],Arial_x002C_8,True,False,,,Top_x002C__x0020_Bottom</value>
+              </Conditions>
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="3" />
+              <Parent isRef="29" />
+              <Text>{Round(BoxByIDH.Weight2,0)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="49" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator> </GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+            <Text7 Ref="50" type="Text" isKey="true">
+              <Border>Top, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>[245:245:245]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>20.8,0,1.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="5">
+                <value>_x007B_BoxByIDH.StatW3_x0020__x003D__x003D__x0020_1_x0020__x007C__x007C__x0020_BoxByIDH.StatW3_x0020__x003D__x003D__x0020_2_x007D_,[0:0:0],[190:255:180],Arial_x002C_8,True,False,,,Top_x002C__x0020_Bottom</value>
+                <value>_x007B_BoxByIDH.StatW3_x0020__x003D__x003D__x0020_3_x0020__x007C__x007C__x0020_BoxByIDH.StatW3_x0020__x003D__x003D__x0020_4_x007D_,[0:0:0],[255:255:192],Arial_x002C_8,True,False,,,Top_x002C__x0020_Bottom</value>
+                <value>_x007B_BoxByIDH.StatW3_x0020__x003D__x003D__x0020_5_x0020__x007C__x007C__x0020_BoxByIDH.StatW3_x0020__x003D__x003D__x0020_6_x007D_,[0:0:0],[255:234:234],Arial_x002C_8,True,False,,,Top_x002C__x0020_Bottom</value>
+                <value>_x007B_BoxByIDH.StatW3_x0020__x003D__x003D__x0020_7_x007D_,[0:0:0],[255:147:147],Arial_x002C_8,True,False,,,Top_x002C__x0020_Bottom</value>
+                <value>_x007B_BoxByIDH.StatW3_x0020__x003D__x003D__x0020_8_x007D_,[0:0:0],[248:127:76],Arial_x002C_8,True,False,,,Top_x002C__x0020_Bottom</value>
+              </Conditions>
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="3" />
+              <Parent isRef="29" />
+              <Text>{Round(BoxByIDH.Weight3,0)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="51" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator> </GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text7>
+            <Text28 Ref="52" type="Text" isKey="true">
+              <Border>Top, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>[245:245:245]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>22.2,0,1.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="5">
+                <value>_x007B_BoxByIDH.StatW4_x0020__x003D__x003D__x0020_1_x0020__x007C__x007C__x0020_BoxByIDH.StatW4_x0020__x003D__x003D__x0020_2_x007D_,[0:0:0],[190:255:180],Arial_x002C_8,True,False,,,Top_x002C__x0020_Bottom</value>
+                <value>_x007B_BoxByIDH.StatW4_x0020__x003D__x003D__x0020_3_x0020__x007C__x007C__x0020_BoxByIDH.StatW4_x0020__x003D__x003D__x0020_4_x007D_,[0:0:0],[255:255:192],Arial_x002C_8,True,False,,,Top_x002C__x0020_Bottom</value>
+                <value>_x007B_BoxByIDH.StatW4_x0020__x003D__x003D__x0020_5_x0020__x007C__x007C__x0020_BoxByIDH.StatW4_x0020__x003D__x003D__x0020_6_x007D_,[0:0:0],[255:234:234],Arial_x002C_8,True,False,,,Top_x002C__x0020_Bottom</value>
+                <value>_x007B_BoxByIDH.StatW4_x0020__x003D__x003D__x0020_7_x007D_,[0:0:0],[255:147:147],Arial_x002C_8,True,False,,,Top_x002C__x0020_Bottom</value>
+                <value>_x007B_BoxByIDH.StatW4_x0020__x003D__x003D__x0020_8_x007D_,[0:0:0],[248:127:76],Arial_x002C_8,True,False,,,Top_x002C__x0020_Bottom</value>
+              </Conditions>
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text28</Name>
+              <Page isRef="3" />
+              <Parent isRef="29" />
+              <Text>{Round(BoxByIDH.Weight4,0)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="53" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator> </GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text28>
+            <Text29 Ref="54" type="Text" isKey="true">
+              <Border>Top, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>[245:245:245]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>23.6,0,1.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="5">
+                <value>_x007B_BoxByIDH.StatW5_x0020__x003D__x003D__x0020_1_x0020__x007C__x007C__x0020_BoxByIDH.StatW5_x0020__x003D__x003D__x0020_2_x007D_,[0:0:0],[190:255:180],Arial_x002C_8,True,False,,,Top_x002C__x0020_Bottom</value>
+                <value>_x007B_BoxByIDH.StatW5_x0020__x003D__x003D__x0020_3_x0020__x007C__x007C__x0020_BoxByIDH.StatW5_x0020__x003D__x003D__x0020_4_x007D_,[0:0:0],[255:255:192],Arial_x002C_8,True,False,,,Top_x002C__x0020_Bottom</value>
+                <value>_x007B_BoxByIDH.StatW5_x0020__x003D__x003D__x0020_5_x0020__x007C__x007C__x0020_BoxByIDH.StatW5_x0020__x003D__x003D__x0020_6_x007D_,[0:0:0],[255:234:234],Arial_x002C_8,True,False,,,Top_x002C__x0020_Bottom</value>
+                <value>_x007B_BoxByIDH.StatW5_x0020__x003D__x003D__x0020_7_x007D_,[0:0:0],[255:147:147],Arial_x002C_8,True,False,,,Top_x002C__x0020_Bottom</value>
+                <value>_x007B_BoxByIDH.StatW5_x0020__x003D__x003D__x0020_8_x007D_,[0:0:0],[248:127:76],Arial_x002C_8,True,False,,,Top_x002C__x0020_Bottom</value>
+              </Conditions>
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text29</Name>
+              <Page isRef="3" />
+              <Parent isRef="29" />
+              <Text>{Round(BoxByIDH.Weight5,0)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="55" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator> </GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text29>
+            <Text30 Ref="56" type="Text" isKey="true">
+              <Border>Top, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>[245:245:245]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>25,0,1.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="5">
+                <value>_x007B_BoxByIDH.StatW6_x0020__x003D__x003D__x0020_1_x0020__x007C__x007C__x0020_BoxByIDH.StatW6_x0020__x003D__x003D__x0020_2_x007D_,[0:0:0],[190:255:180],Arial_x002C_8,True,False,,,Top_x002C__x0020_Right_x002C__x0020_Bottom</value>
+                <value>_x007B_BoxByIDH.StatW6_x0020__x003D__x003D__x0020_3_x0020__x007C__x007C__x0020_BoxByIDH.StatW6_x0020__x003D__x003D__x0020_4_x007D_,[0:0:0],[255:255:192],Arial_x002C_8,True,False,,,Top_x002C__x0020_Right_x002C__x0020_Bottom</value>
+                <value>_x007B_BoxByIDH.StatW6_x0020__x003D__x003D__x0020_5_x0020__x007C__x007C__x0020_BoxByIDH.StatW6_x0020__x003D__x003D__x0020_6_x007D_,[0:0:0],[255:234:234],Arial_x002C_8,True,False,,,Top_x002C__x0020_Right_x002C__x0020_Bottom</value>
+                <value>_x007B_BoxByIDH.StatW6_x0020__x003D__x003D__x0020_7_x007D_,[0:0:0],[255:147:147],Arial_x002C_8,True,False,,,Top_x002C__x0020_Right_x002C__x0020_Bottom</value>
+                <value>_x007B_BoxByIDH.StatW6_x0020__x003D__x003D__x0020_8_x007D_,[0:0:0],[248:127:76],Arial_x002C_8,True,False,,,Top_x002C__x0020_Right_x002C__x0020_Bottom</value>
+              </Conditions>
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text30</Name>
+              <Page isRef="3" />
+              <Parent isRef="29" />
+              <Text>{Round(BoxByIDH.Weight6,0)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="57" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator> </GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text30>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName isNull="true" />
+          <Expressions isList="true" count="0" />
+          <Filters isList="true" count="0" />
+          <Name>Data</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+          <Sort isList="true" count="0" />
+        </Data>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Expressions isList="true" count="0" />
+      <Guid>48518019757c4cc3a1d0a8d0a5497bbd</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <Orientation>Landscape</Orientation>
+      <PageHeight>21</PageHeight>
+      <PageWidth>29.7</PageWidth>
+      <Report isRef="0" />
+    </Page1>
+  </Pages>
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>6/9/2023 11:31:39 AM</ReportChanged>
+  <ReportCreated>6/7/2023 8:50:46 AM</ReportCreated>
+  <ReportFile>C:\Users\onimo\source\repos\Henkel\Henkel.WebApp\Server\Resources\ReportFiles\RegBatchAudit.mrt</ReportFile>
+  <ReportGuid>5036615562ba4ac39e4bb2ff30dc1ec9</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2022.4.2.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="1">
+    <Стиль1 Ref="58" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Brush>[245:245:245]</Brush>
+      <Conditions isList="true" count="0" />
+      <Font>Arial,8</Font>
+      <Name>Стиль1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>Black</TextBrush>
+    </Стиль1>
+  </Styles>
+</StiSerializer>

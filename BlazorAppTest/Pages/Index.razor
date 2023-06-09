@@ -3,37 +3,47 @@
  
 @using System.Data
 @using BlazorAppTest.Dto
-@using Stimulsoft.Base
+@using Stimulsoft.Base 
 @using Stimulsoft.Report
 @using Stimulsoft.Report.Blazor
 @using Stimulsoft.Report.Dictionary
 @using Stimulsoft.Report.Web
+@using System.Text.Json;
 @inject HttpClient Http
+@if (_isLoad)
+{
+	<StiBlazorViewer Report="@report" Options="@options" />
+}
+else
+{
+	<h1>формирование</h1>
+}
 
-<StiBlazorViewer Report="@report" Options="@options" />
 
 @code
 {
+	private bool _isLoad { get; set; } = false;
 	private StiReport report;
-	private StiBlazorViewerOptions options;
-	private List<BalloonDto> printingLists = new();
+	private StiBlazorViewerOptions options; 
 	protected override async Task OnInitializedAsync()
 	{ 
-		Stimulsoft.Base.StiLicense.Key = "";
+		Stimulsoft.Base.StiLicense.Key = "6vJhGtLLLz2GNviWmUTrhSqnOItdDwjBylQzQcAOiHmRcE6LvZWuCMkoec/KaVLZ+RRQBvX6WojHO5nt+FVhALzcVG" +
+			"PspfZ3yyTp6F/nn6wXv3H9adzIrqTJp+WwF5FP+jgm1PdFLxNe0p9CCc5GmEA/Ocwt7cj433VGO8PBaTlX4BjWjXwS" +
+			"ZKRJZ/MaYhqJYdhzwdLTXdev3vbk2BN1CAIPaMxqSLaWY7ZQ5BeqMVbXlPc5k6dVJ3Tt1yE+RtJosPtn4LyNuSUgXR" +
+			"Lkr8sP6Vg7G2+YMQ/TsF2vwWMiDoTwgLfqvXK18IeMOW+xMEQcciZ9Z4Mt5ogtU1oN1abpcnIt6ZultLygylNC/GFF" +
+			"3b5At2tra3l9sMZ6c1blpL1jyZ/fJ1tTRrl0/7cUwfGwN4vzUDyi/PMdmpV2b2+0ldbDh3/d8QS4Yx2Ok9+28n85+B" +
+			"X8soN+LPWCg2qrjadPHySgoFVqhy4tonTBP8NT0lDnVmojrZ2z8WHKQmTVI38mu5dLtUnSUz7VL2LiqpVV5jxaii/+" +
+			"IRTR/5IwsEDKXckzVpCOolxuWjH20F+eHEFDk8V/2cCF9hWBhVXlKJirRMHfqjURyCoC8o3DdA4CCSk=";
 		report = StiReport.CreateNewReport();
-		var bytes = await Http.GetByteArrayAsync("Reporst/QRCode.mrt");
+		var bytes = await Http.GetByteArrayAsync("Reporst/RegBatchAudit.mrt");
 		report.Load(bytes);
-		GetData();
-		report.RegBusinessObject("TestReuests", printingLists);
-
-
+		_isLoad = true;
+		StateHasChanged();
+		var businessObjects = await Http.GetFromJsonAsync<List<RepBatchIDH>>("sample-data/RegBatchAuditData.json");
+		//var businessObjects = await JsonSerializer.DeserializeAsync<List<RepBatchIDH>>(stream);
+		report.RegBusinessObject("BoxByIDH", businessObjects);
+		report.Dictionary.SynchronizeBusinessObjects();
+		await report.RenderAsync();
 		await base.OnInitializedAsync();
-	}
-	private void GetData()
-	{
-		for (var i = 0; i < 24; i++)
-		{
-			printingLists.Add(new BalloonDto { Id = Guid.NewGuid(), Name = i.ToString() });
-		}
-	}
+	} 
 }
