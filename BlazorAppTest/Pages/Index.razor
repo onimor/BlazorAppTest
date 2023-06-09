@@ -30,10 +30,10 @@ else
 		Stimulsoft.Base.StiLicense.Key = "";
 		report = StiReport.CreateNewReport();
 		var bytes = await Http.GetByteArrayAsync("Reporst/RegBatchAudit.mrt");
+		var businessObjects = await Http.GetFromJsonAsync<List<RepBatchIDH>>("sample-data/RegBatchAuditData.json");
 		report.Load(bytes);
 		_isLoad = true;
-		StateHasChanged();
-		var businessObjects = await Http.GetFromJsonAsync<List<RepBatchIDH>>("sample-data/RegBatchAuditData.json");
+		StateHasChanged(); 
 		//var businessObjects = await JsonSerializer.DeserializeAsync<List<RepBatchIDH>>(stream);
 		report.RegBusinessObject("BoxByIDH", businessObjects);
 		report.Dictionary.SynchronizeBusinessObjects();
