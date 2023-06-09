@@ -37,6 +37,11 @@ else
 		//var businessObjects = await JsonSerializer.DeserializeAsync<List<RepBatchIDH>>(stream);
 		report.RegBusinessObject("BoxByIDH", businessObjects);
 		report.Dictionary.SynchronizeBusinessObjects();
+		options = new StiBlazorViewerOptions();
+		options.Toolbar.Zoom = 130;
+		options.Appearance.ScrollbarsMode = true;
+		options.Toolbar.DisplayMode = Stimulsoft.Report.Web.StiToolbarDisplayMode.Separated;
+		options.Toolbar.ViewMode = Stimulsoft.Report.Web.StiWebViewMode.SinglePage;
 		await report.RenderAsync();
 		await base.OnInitializedAsync();
 	} 
